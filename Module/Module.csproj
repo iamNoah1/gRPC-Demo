@@ -7,13 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\provisioning.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="../ProvisioningService/Protos/provisioning.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
-    <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.47.0" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
   </ItemGroup>
 
 </Project>

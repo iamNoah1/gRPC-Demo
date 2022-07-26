@@ -10,6 +10,13 @@ message ProvisioningResponse {
   string status = 1;
 }
 
+message ProvisioningFinishedRequest {
+  string module_url = 1;
+}
+
+message ProvisioningFinishedResponse {}
+
 service Provisioner {
   rpc ProvisiongModule (ProvisioningRequest) returns (ProvisioningResponse);
+  rpc ModuleReady (ProvisioningFinishedRequest) returns (ProvisioningFinishedResponse);
 }

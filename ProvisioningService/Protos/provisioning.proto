@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "Provisioning";
+
+message ProvisioningRequest {
+  string module_name = 1;
+}
+
+message ProvisioningResponse {
+  string status = 1;
+}
+
+service Provisioner {
+  rpc ProvisiongModule (ProvisioningRequest) returns (ProvisioningResponse);
+}

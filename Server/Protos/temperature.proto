@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Server";
+
+service TemperatureReceiver {
+  rpc GetTemperatureStream (google.protobuf.Empty) returns (stream TemperatureData);
+}
+
+message TemperatureData {
+  google.protobuf.Timestamp dateTimeStamp = 1;
+  int32 temperatureC = 2;
+}

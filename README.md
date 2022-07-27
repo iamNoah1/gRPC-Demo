@@ -11,3 +11,4 @@
 * `grpcurl -plaintext -d '{"name": "noah"}' localhost:5226 Greeter/UnaryCall`
 
 ## Additional resources
+* [grpcurl](https://github.com/fullstorydev/grpcurl)

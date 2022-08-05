@@ -22,6 +22,14 @@ Clients sends request, server streams responses
 * `dotnet run --project Server`
 * `dotnet run --project TempClient`
 
+### Client Stream 
+
+Client sends requests through stream, server responds
+
+* `dotnet run --project Server`
+* `dotnet run --project GreetingsClient`
+
+
 ## Additional resources
 * [grpcurl](https://github.com/fullstorydev/grpcurl)
 * https://github.com/ckadluba/GrpcDemos 

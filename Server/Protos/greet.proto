@@ -4,6 +4,7 @@ option csharp_namespace = "Server";
 
 service Greeter {
   rpc UnaryCall (HelloRequest) returns (HelloReply);
+  rpc ClientStreaming (stream HelloRequest) returns (HelloListReply);
 }
 
 message HelloRequest {
@@ -12,4 +13,8 @@ message HelloRequest {
 
 message HelloReply {
   string message = 1;
+}
+
+message HelloListReply {
+  repeated HelloReply messages = 1;
 }
